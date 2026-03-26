@@ -101,7 +101,7 @@ The raw correlation between `price` and other variables is currently low (e.g., 
 
 The box plot reveals clear pricing patterns across room types and bedroom counts. Entire home/apt listings command the highest prices overall, with 3+ bedroom units showing the widest price range — medians around $300–$350 and upper whiskers stretching past $550, reflecting strong demand for larger full-unit rentals. Private rooms are considerably more affordable, with most bedroom categories clustering between $75–$200, though studios in private rooms show a surprisingly high median near $160 with notable upside variation. Shared rooms occupy an interesting middle ground, where larger units (2BR and 3+ BR) actually price comparably to entire home listings, likely because the cost is split among more guests. Across all room types, the 1 BR category tends to have the tightest interquartile ranges, suggesting more consistent and predictable pricing, while 3+ BR units show the most volatility regardless of room type — likely driven by location, amenities, and seasonal demand. Overall, bedroom count has a more dramatic effect on price within entire home/apt listings than in private or shared room contexts.
 
-![Airbnb Prices by Room Type and Number of Bedrooms](Airbnb_Prices_by_Room_Type_and_Bedrooms.png)
+![Airbnb Prices by Room Type and Number of Bedrooms](figures/Airbnb_Prices_by_Room_Type_and_Bedrooms.png)
 
 ---
 
@@ -109,7 +109,7 @@ The box plot reveals clear pricing patterns across room types and bedroom counts
 
 Shared rooms show the highest variability in monthly reviews, while entire home/apt listings are the most consistent but tend to receive fewer reviews. Private and hotel rooms fall in between, with medians clustering below 1 review per month across all room types — suggesting that most listings, regardless of type, receive reviews relatively infrequently.
 
-![Reviews per Month by Room Type](reviews_per_month_by_room_type.png)
+![Reviews per Month by Room Type](figures/reviews_per_month_by_room_type.png)
 
 ---
 
@@ -117,7 +117,7 @@ Shared rooms show the highest variability in monthly reviews, while entire home/
 
 The map indicates that Airbnb prices in Manhattan are higher than in other areas of New York City. Listings are sparse on Staten Island and in the outer areas of Queens, suggesting that visitors tend to prefer more urban neighborhoods. Manhattan’s status as the most expensive borough is an important factor to consider in our analysis. The color scale represents price in dollars per night.
 
-![NYC Geographic Price Map of NYC](NYC_map_prices.png)
+![NYC Geographic Price Map of NYC](figures/NYC_map_prices.png)
 
 ---
 
