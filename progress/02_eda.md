@@ -121,7 +121,7 @@ The map indicates that Airbnb prices in Manhattan are higher than in other areas
 
 ### Figure 4: Correlation Matrix Heatmep
 
-Shared rooms show the highest variability in monthly reviews, while entire home/apt listings are the most consistent but tend to receive fewer reviews. Private and hotel rooms fall in between, with medians clustering below 1 review per month across all room types — suggesting that most listings, regardless of type, receive reviews relatively infrequently.
+The heatmap reveals strong multi-collinearity between accommodates, bedrooms, and beds ($r > 0.70$), indicating that these features provide overlapping information regarding listing capacity. Interestingly, the correlation between price and review_scores is negligible, suggesting that luxury pricing in NYC is driven by physical attributes and location rather than guest satisfaction ratings. The low linear correlation between price and individual predictors ($< 0.20$) highlights the necessity of the log-transformation and the use of non-linear models for the next phase of the project.
 
 ![Correlation Matrix Heatmap](figures/corr_heatmap.png)
 
