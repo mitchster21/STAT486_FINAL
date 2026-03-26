@@ -79,7 +79,7 @@ Entire home/apt listings dominate the dataset. Price varies considerably across 
 
 The box plot reveals clear pricing patterns across room types and bedroom counts. Entire home/apt listings command the highest prices overall, with 3+ bedroom units showing the widest price range — medians around $300–$350 and upper whiskers stretching past $550, reflecting strong demand for larger full-unit rentals. Private rooms are considerably more affordable, with most bedroom categories clustering between $75–$200, though studios in private rooms show a surprisingly high median near $160 with notable upside variation. Shared rooms occupy an interesting middle ground, where larger units (2BR and 3+ BR) actually price comparably to entire home listings, likely because the cost is split among more guests. Across all room types, the 1 BR category tends to have the tightest interquartile ranges, suggesting more consistent and predictable pricing, while 3+ BR units show the most volatility regardless of room type — likely driven by location, amenities, and seasonal demand. Overall, bedroom count has a more dramatic effect on price within entire home/apt listings than in private or shared room contexts.
 
-![Airbnb Prices by Room Type and Number of Bedrooms](demo/figures/Airbnb_Prices_by_Room_Type_and_Bedrooms.png)
+![Airbnb Prices by Room Type and Number of Bedrooms](STAT486_FINAL/demo/figures/Airbnb_Prices_by_Room_Type_and_Bedrooms.png)
 
 ---
 
