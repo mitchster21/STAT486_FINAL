@@ -42,8 +42,8 @@ Inside Airbnb publishes data under a [Creative Commons CC0 1.0 Universal license
 
 | Statistic | Value |
 |-----------|-------|
-| Mean | ~$184 |
-| Std Dev | ~$240 |
+| Mean | $519.62 |
+| Std Dev | $3658.43 |
 | Min | $10 |
 | 25th pct | $89 |
 | Median | $135 |
