@@ -38,38 +38,60 @@ Inside Airbnb publishes data under a [Creative Commons CC0 1.0 Universal license
 
 ## 3. Summary Statistics
 
-**Price (raw, n = 21,415):**
+### Price Distribution (n = 21,415)
+The price variable exhibits significant right-skewness. While the **Median** nightly rate is **$154.00**, the **Mean** is pulled upward to **$519.62** by extreme outliers, including a maximum value of **$50,138.00**. 
 
-| Statistic | Value |
-|-----------|-------|
-| Mean | $519.62 |
-| Std Dev | $3658.43 |
-| Min | $10 |
-| 25th pct | $89 |
-| Median | $135 |
-| 75th pct | $210 |
-| Max | $10,000+ |
+| Statistic | Value (USD) |
+| :--- | :--- |
+| **Mean** | $519.62 |
+| **Median** | $154.00 |
+| **Std. Deviation** | $3,658.43 |
+| **25th Percentile (Q1)** | $90.00 |
+| **75th Percentile (Q3)** | $269.00 |
+| **Range** | $9.00 – $50,138.00 |
 
-The raw price distribution is heavily right-skewed, with a long tail driven by luxury listings. After applying a log transformation, the distribution becomes approximately normal, which is more appropriate for regression modeling.
+> **Statistical Note:** The Standard Deviation ($3,658.43) is nearly 7x the Mean, confirming high volatility. Log-transformation or outlier capping (e.g., at the 95th or 99th percentile) is recommended for future regression modeling.
 
-**Bedrooms (n = 30,273):**
+---
 
-| Statistic | Value |
-|-----------|-------|
-| Mean | 1.39 |
-| Std Dev | 0.95 |
-| Median | 1.0 |
-| Max | 16.0 |
+### Key Numerical Variables (n = 21,415)
+| Variable | Mean | Std. Dev | Median | Max |
+| :--- | :--- | :--- | :--- | :--- |
+| **Accommodates** | 2.89 | 2.03 | 2.00 | 16.00 |
+| **Bedrooms** | 1.35 | 0.97 | 1.00 | 16.00 |
+| **Beds** | 1.63 | 1.22 | 1.00 | 40.00 |
+| **Bathrooms** | 1.19 | 0.55 | 1.00 | 15.50 |
+| **Review Rating** | 4.77 | 0.40 | 4.86 | 5.00 |
 
-**Room Type (n = 36,353):**
+---
 
-| Room Type | Count |
-|-----------|-------|
-| Entire home/apt | ~22,000 |
-| Private room | ~12,000 |
-| Shared room | ~300 |
+### Categorical Distributions
 
-Entire home/apt listings dominate the dataset. Price varies considerably across room types, with entire homes commanding substantially higher nightly rates than private or shared rooms. The number of bedrooms shows a moderate positive relationship with price, as expected. Larger properties tend to list at higher rates.
+#### Room Type (n = 21,415)
+Entire homes and apartments make up the majority of the dataset, followed closely by private rooms.
+
+| Room Type | Count | Percentage |
+| :--- | :--- | :--- |
+| **Entire home/apt** | 12,441 | 58.1% |
+| **Private room** | 8,604 | 40.2% |
+| **Shared room** | 199 | 0.9% |
+| **Hotel room** | 171 | 0.8% |
+
+#### Borough Distribution (n = 21,415)
+Manhattan and Brooklyn account for nearly 80% of all listings in the dataset.
+
+| Borough | Listing Count | Percentage |
+| :--- | :--- | :--- |
+| **Manhattan** | 9,558 | 44.6% |
+| **Brooklyn** | 7,313 | 34.1% |
+| **Queens** | 3,412 | 15.9% |
+| **Bronx** | 818 | 3.8% |
+| **Staten Island** | 314 | 1.5% |
+
+---
+
+### Correlation Insights
+The raw correlation between `price` and other variables is currently low (e.g., `accommodates` at **0.10**). This is likely due to the extreme price outliers masking linear relationships. Capacity variables (`beds`, `bedrooms`, and `accommodates`) show strong multi-collinearity, with correlations ranging from **0.54 to 0.70**.
 
 ---
 
