@@ -14,7 +14,7 @@ This project aims to predict the nightly price of NYC Airbnb listings using supe
 
 We implemented three models: linear regression (baseline), decision tree regression, and random forest regression. The target variable is `log_price` (log-transformed nightly price), chosen to reduce right skew and improve model fit. Features include `bedrooms`, `bathrooms`, `accommodates`, `review_scores_rating`, `minimum_nights`, `calculated_host_listings_count`, `room_type`, `neighbourhood_group_cleansed`, and `neighbourhood_cleansed`.
 
-All preprocessing — median imputation for numeric features, most-frequent imputation and one-hot encoding for categoricals, and standard scaling — was performed inside a `sklearn` Pipeline fitted only on training data, preventing data leakage. The dataset was split 80/20 into training (n = 17,132) and test (n = 4,283) sets. Decision tree and random forest hyperparameters were tuned using 5-fold GridSearchCV on the training set only.
+All preprocessing (median imputation for numeric features, most-frequent imputation and one-hot encoding for categoricals, and standard scaling) was performed inside a `sklearn` Pipeline fitted only on training data, preventing data leakage. The dataset was split 80/20 into training (n = 17,132) and test (n = 4,283) sets. Decision tree and random forest hyperparameters were tuned using 5-fold GridSearchCV on the training set only.
 
 | Model | Key Hyperparameters Tuned | Best Params | CV Strategy | Train RMSE | Test RMSE | Train R² | Test R² |
 |---|---|---|---|---|---|---|---|
@@ -28,7 +28,7 @@ All preprocessing — median imputation for numeric features, most-frequent impu
 
 All three models showed a consistent pattern: predictions clustered tightly around median prices while extreme high-price outliers were systematically underestimated, visible in the actual vs. predicted plots below. Random Forest performed best with a test R² of 0.752 and RMSE of 0.460, outperforming both the decision tree (R² = 0.713) and linear regression (R² = 0.617). Its advantage stems from averaging across many trees, which reduces variance and captures nonlinear feature interactions that linear regression cannot model.
 
-The decision tree showed a noticeable train/test R² gap (0.798 vs. 0.713), indicating mild overfitting even with tuned depth. Random Forest mitigated this through ensemble averaging, with a smaller gap (0.846 vs. 0.752). Linear regression's weaker performance suggests that price relationships in this data are genuinely nonlinear — particularly the interaction between neighbourhood and room type.
+The decision tree showed a noticeable train/test R² gap (0.798 vs. 0.713), indicating mild overfitting even with tuned depth. Random Forest decreased this through ensemble averaging, with a smaller gap (0.846 vs. 0.752). Linear regression's weaker performance suggests that price relationships in this data are nonlinear, particularly the interaction between neighbourhood and room type.
 
 ![Actual vs. Predicted](figures/actual_vs_predicted.png)
 
