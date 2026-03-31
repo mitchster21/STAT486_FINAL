@@ -28,7 +28,7 @@ All preprocessing (median imputation for numeric features, most-frequent imputat
 
 All three models showed a consistent pattern: predictions clustered tightly around median prices while extreme high-price outliers were systematically underestimated, visible in the actual vs. predicted plots below. Random Forest performed best with a test R² of 0.752 and RMSE of 0.460, outperforming both the decision tree (R² = 0.713) and linear regression (R² = 0.617). Its advantage stems from averaging across many trees, which reduces variance and captures nonlinear feature interactions that linear regression cannot model.
 
-The decision tree showed a noticeable train/test R² gap (0.798 vs. 0.713), indicating mild overfitting even with tuned depth. Random Forest decreased this through ensemble averaging, with a smaller gap (0.846 vs. 0.752). Linear regression's weaker performance suggests that price relationships in this data are nonlinear, particularly the interaction between neighbourhood and room type.
+The decision tree showed a noticeable train/test R² gap (0.798 vs. 0.713), indicating mild overfitting even with tuned depth. Random Forest mitigated this through averaging many predictions, with a smaller gap (0.846 vs. 0.752). While some overfitting is present across all three models, the test R² of 0.752 for Random Forest suggests the model generalizes well enough to support meaningful conclusions about which features drive NYC Airbnb pricing. Linear regression's weaker performance suggests that price relationships in this data are nonlinear, particularly the interaction between neighbourhood and room type.
 
 ![Actual vs. Predicted](figures/actual_vs_predicted.png)
 
