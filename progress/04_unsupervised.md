@@ -27,7 +27,7 @@ This indicates that **listing characteristics (room type, size, capacity)** are 
 
 Clustering did not significantly improve predictive performance. A global Random Forest achieved RMSE = 0.4433, compared to RMSE = 0.4405 for per-cluster models (+0.0028 improvement).
 
-However, clustering reinforces the supervised model’s findings. The same key variables—room type, property size, and location—drive both prediction and cluster formation. This consistency validates that the supervised model is capturing real underlying structure.
+However, clustering reinforces the supervised model’s findings. The same key variables: room type, property size, and location drive both prediction and cluster formation. This consistency validates that the supervised model is capturing real underlying structure.
 
 ## Final Conclusion
 
