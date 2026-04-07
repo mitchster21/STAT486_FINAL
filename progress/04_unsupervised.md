@@ -14,10 +14,10 @@ We initially expected clusters to align with **boroughs (geographic regions)**. 
 
 Instead, clusters align strongly with **room type and price tiers**, revealing meaningful market segments:
 
-- Cluster 1: Low-cost private rooms (median ≈ $85)
-- Cluster 0: Mid-range entire homes (median ≈ $190)
-- Cluster 3: Large, high-end listings (median ≈ $350)
-- Cluster 2: Small shared/low-demand listings
+- Cluster 2: Small shared/low-demand listings (median ~ $56)
+- Cluster 1: Low-cost private rooms (median ~ $85)
+- Cluster 0: Mid-range entire homes (median ~ $190)
+- Cluster 3: Large, high-end listings (median ~ $350)
 
 ![Price Distribution by Cluster](figures/cluster_price_distributions.png)
 
@@ -27,7 +27,7 @@ This indicates that **listing characteristics (room type, size, capacity)** are 
 
 Clustering did not significantly improve predictive performance. A global Random Forest achieved RMSE = 0.4433, compared to RMSE = 0.4405 for per-cluster models (+0.0028 improvement).
 
-However, clustering reinforces the supervised model’s findings. The same key variables: room type, property size, and location drive both prediction and cluster formation. This consistency validates that the supervised model is capturing real underlying structure.
+However, clustering reinforces the supervised model’s findings. The same key variables: room type, property size, and location drive both prediction and cluster formation. This consistency validates that the supervised model is capturing the real underlying structure.
 
 ## Final Conclusion
 
