@@ -42,6 +42,8 @@ SHAP values were computed for the random forest model using `shap.TreeExplainer`
 
 `room_type_Private room` and `neighbourhood_group_cleansed_Manhattan` are the two strongest predictors. Being a private room is associated with strongly negative SHAP values; this means that it consistently pushes predicted price down relative to entire home listings. Manhattan borough membership pushes prices up substantially. `minimum_nights`, `accommodates`, and `bathrooms` also contribute meaningfully, while review scores and host listing count have relatively weak influence. This confirms that location and listing type dominate price prediction, with physical size playing a secondary role.
 
+To better understand model limitations, we examined observations with the highest prediction error. SHAP analysis revealed that these cases often involved typical feature values but unusually high prices, likely driven by confounding variables. For example, one property’s predicted value was much higher than the model’s base expectation, despite having otherwise typical features, indicating that certain factors disproportionately influenced the prediction.
+
 ---
 
 ## 5. Final Takeaways
